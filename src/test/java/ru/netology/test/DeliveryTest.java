@@ -5,13 +5,10 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 import ru.netology.data.DataGenerator;
 
-
-import java.time.Duration;
-
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class DeliveryTest {
 
