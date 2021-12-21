@@ -34,13 +34,13 @@ public class DeliveryTest {
         $("[data-test-id='phone'] input").setValue(validUser.getPhone());
         $("[class='checkbox__box']").click();
         $$("button").find(exactText("Запланировать")).click();
-        $("[data-test-id='success-notification'] .notification__content").shouldBe(visible).shouldHave(text("Встреча успешно запланирована на "+ firstMeetingDate));
+        $(".notification_visible .notification__content").shouldBe(visible).shouldHave(text("Встреча успешно запланирована на "+ firstMeetingDate));
 
         $("[data-test-id='date'] input").sendKeys(deleteString);
         $("[data-test-id='date'] input").setValue(secondMeetingDate);
         $$("button").find(exactText("Запланировать")).click();
         $("[data-test-id='replan-notification'] button").shouldHave(text("Перепланировать")).click();
-        $("[data-test-id='success-notification'] .notification__content").shouldBe(visible).shouldHave(text("Встреча успешно запланирована на "+ secondMeetingDate));
+        $(".notification_visible .notification__content").shouldBe(visible).shouldHave(text("Встреча успешно запланирована на "+ secondMeetingDate));
     }
 
 
